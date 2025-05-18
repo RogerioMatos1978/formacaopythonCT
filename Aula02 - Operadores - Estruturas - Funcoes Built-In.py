@@ -188,3 +188,74 @@ x = 10
 print(x > 5 and x < 15)   # True (ambas são verdadeiras)
 print(x < 5 or x < 12)    # True (pelo menos uma é verdadeira)
 print(not(x < 20))        # False (pois x < 20 é True, e not True = False)
+
+# 6. Operadores de Identidade
+# Verificam se duas variáveis são, de fato, o mesmo objeto em memória:
+#
+# is — Retorna True se as variáveis apontam para o mesmo objeto
+# is not — Retorna True se não apontarem para o mesmo objeto
+a = [1, 2, 3]
+b = a
+c = [1, 2, 3]
+
+print(a is b)      # True  (ambas referem-se à mesma lista)
+print(a is c)      # False (c é outra lista, mesmo que com itens iguais)
+
+print(a is not b)  # False
+print(a is not c)  # True
+
+# 7. Operadores de Pertinência
+# Verificam se uma sequência existe em outro objeto (string, lista, tupla etc.):
+#
+# in — Retorna True se o valor estiver contido na sequência
+# not in — Retorna True se o valor não estiver contido
+frutas = ["maçã", "banana", "uva"]
+print("banana" in frutas)      # True
+print("laranja" not in frutas)  # True
+
+texto = "Python é divertido"
+print("diver" in texto)         # True
+print("php" in texto)           # False
+
+# 8. Precedência de Operadores
+# Determina a ordem em que as operações são realizadas. As operações entre parênteses têm maior precedência, seguidas por exponenciação, depois multiplicação/divisão, e assim por diante. Operadores de mesma precedência são avaliados da esquerda para a direita.
+#
+# Precedência	Operadores
+# Mais alto	( ) (Parênteses)
+#           ** (Exponenciação)
+#           *, /, //, % (Multiplicação, Divisão, Divisão de Inteiro e Resto)
+#           +, - (Adição e Subtração)
+#           ==, !=, >, <, >=, <=, is, is not, in, not in (Comparações, Identidade e Pertinência)
+#           not (Negação Lógica)
+#           and (Conjunção Lógica)
+# Mais baixo	or (Disjunção Lógica)
+# Exemplos de uso da precedência:
+
+# Sem parênteses, avaliado da esquerda para a direita
+print(6 + 3 - 6 + 3)  # 6
+
+# Alterando ordem com parênteses
+print(6 + 3 - (-6 + 3))  # 12
+
+# Parênteses usados em cada trecho
+print((6 + 3) - (6 + 3))  # 0
+
+# Outro exemplo:
+print(100 + 5 * 3)  # 115, multiplicação antes da soma
+
+# Mesma precedência, segue da esquerda para a direita
+print(5 + 4 - 7 + 3)  # 5
+
+# 9. Bônus - Operações com Strings
+# Alguns operadores aritméticos também podem ser utilizados em strings:
+
+# + para concatenação.
+texto1 = "Olá, "
+texto2 = "Mundo!"
+resultado = texto1 + texto2
+print(resultado)  # "Olá, Mundo!"
+
+# * para repetição.
+mensagem = "Python "
+repeticoes = 3
+print(mensagem * repeticoes)  # "Python Python Python "
