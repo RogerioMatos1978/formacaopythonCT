@@ -130,3 +130,61 @@ Existem diversos grupos de operadores em Python, dentre eles:
 Um exemplo simples de operador aritmético é +, que realiza a soma de valores:
 """
 print(10 + 5)  # Exibe 15
+
+
+# 2. Operadores Aritméticos
+# Usados com números para operações matemáticas comuns:
+
+# Operador	Nome	Exemplo
+# +	Adição	x + y
+# -	Subtração	x - y
+# *	Multiplicação	x * y
+# /	Divisão	x / y
+# %	Resto da Divisão	x % y
+# **	Exponenciação	x ** y
+# //	Divisão de Inteiro	x // y
+
+print(7 % 2)    # 1 (resto de 7 / 2)
+print(2 ** 3)   # 8
+
+# 2. Operadores Aritméticos
+# Usados com números para operações matemáticas comuns:
+
+# Operador	Nome	Exemplo
+# +	Adição	x + y
+# -	Subtração	x - y
+# *	Multiplicação	x * y
+# /	Divisão	x / y
+# %	Resto da Divisão	x % y
+# **	Exponenciação	x ** y
+# //	Divisão de Inteiro	x // y
+
+print(7 % 2)    # 1 (resto de 7 / 2)
+print(2 ** 3)   # 8
+
+# 4. Operadores de Comparação
+# Usados para comparar dois valores e retornar um resultado booleano (True ou False):
+
+# Operador	Nome	Exemplo
+# ==	Igual	x == y
+# !=	Diferente	x != y
+# >	Maior que	x > y
+# <	Menor que	x < y
+# >=	Maior ou igual	x >= y
+# <=	Menor ou igual	x <= y
+a = 10
+b = 5
+print(a == b)   # False
+print(a > b)    # True
+print(a <= b)   # False
+
+# 5. Operadores Lógicos
+# Servem para combinar condições e retornar um resultado booleano:
+#
+# and — Retorna True se ambas as expressões forem verdadeiras
+# or — Retorna True se pelo menos uma expressão for verdadeira
+# not — Inverte o resultado, retornando False se a expressão for verdadeira
+x = 10
+print(x > 5 and x < 15)   # True (ambas são verdadeiras)
+print(x < 5 or x < 12)    # True (pelo menos uma é verdadeira)
+print(not(x < 20))        # False (pois x < 20 é True, e not True = False)
