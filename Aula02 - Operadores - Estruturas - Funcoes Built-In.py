@@ -111,3 +111,22 @@ else:
 
 x = 200
 print(isinstance(x, int))  # True
+
+"""
+Em Python, operadores são utilizados para realizar operações em variáveis e valores. 
+Eles podem somar, comparar, verificar identidade, entre outros. 
+A escolha do operador certo permite que você crie códigos mais expressivos e eficientes.
+
+1. Introdução
+Existem diversos grupos de operadores em Python, dentre eles:
+
+1. Operadores Aritméticos
+2. Operadores de Atribuição
+3. Operadores de Comparação
+4. Operadores Lógicos
+5. Operadores de Identidade
+6. Operadores de Pertinência
+7. Precedência de Operadores (ordem de avaliação)
+Um exemplo simples de operador aritmético é +, que realiza a soma de valores:
+"""
+print(10 + 5)  # Exibe 15
