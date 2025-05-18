@@ -259,3 +259,129 @@ print(resultado)  # "Olá, Mundo!"
 mensagem = "Python "
 repeticoes = 3
 print(mensagem * repeticoes)  # "Python Python Python "
+
+ # Funções Built-in Básicas
+"""
+O Python possui diversas funções nativas (built-in) que facilitam o desenvolvimento. 
+Elas executam tarefas comuns, como encontrar valores máximos e mínimos, 
+somar itens de uma coleção, medir o comprimento de estruturas, entre outros. 
+Vamos ver algumas das principais funções embutidas.
+"""
+# 1. len()
+#  Retorna o número de itens em um objeto. Serve para listas, tuplas, strings, sets, dicionários, etc.
+# Caso seja chamado em um dicionário, retornará a quantidade de chaves presentes.
+# Exemplo com lista
+animais = ["cachorro", "gato", "tigre"]
+print(len(animais))  # 3
+
+# Exemplo com string
+texto = "Python"
+print(len(texto))     # 6
+
+# 2. sum()
+# Soma todos os elementos de um objeto iterável (listas, tuplas, etc.). É bastante útil para somatórios rápidos.
+# Lembre-se de que os itens devem ser numéricos, caso contrário ocorrerá um erro.
+numeros = [10, 20, 5]
+resultado = sum(numeros)
+print(resultado)  # 35
+
+# Também é possível usar um valor inicial
+resultado_com_inicial = sum(numeros, 100)
+print(resultado_com_inicial)  # 135
+
+# 3. max() e min()
+# Retornam, respectivamente, o maior e o menor valor de um iterável.
+# Também funcionam ao passar vários argumentos separados por vírgula.
+#  Se a lista (ou conjunto) estiver vazia, um erro será gerado.
+#  Caso queira evitar isso, valide antes se o iterável possui elementos.
+valores = [3, 10, 1, 7, 4]
+print(max(valores))  # 10
+print(min(valores))  # 1
+
+# Podemos utilizar diretamente:
+print(max(2, 5, 8, 1))  # 8
+print(min(2, 5, 8, 1))  # 1
+
+# 4. range()
+# Gera uma sequência de números. É frequentemente usado em laços de repetição (for),
+# mas também pode ser convertido para lista, por exemplo.
+
+for i in range(3):
+    print(i)
+# Saída: 0, 1, 2
+
+print(list(range(2, 5)))
+# Converte para lista: [2, 3, 4]
+
+print(list(range(1, 10, 2)))
+# Início = 1, Fim = 10, Passo = 2 -> [1, 3, 5, 7, 9]
+
+# 5. abs()
+# Retorna o valor absoluto de um número.
+# Usado para sempre obter a distância de zero.
+
+print(abs(-10))  # 10
+print(abs(3.5))  # 3.5
+
+# 6. round()
+# Arredonda um número para o inteiro mais próximo. R
+# ecebe um parâmetro opcional para determinar quantas casas decimais manter.
+# O comportamento de round() em casos de .5 pode variar dependendo do contexto,
+# geralmente usando o arredondamento “para o par” (banker's rounding).
+
+print(round(3.2))         # 3
+print(round(3.6))         # 4
+print(round(3.14159, 2))   # 3.14
+
+# 7. type()
+# Retorna o tipo do objeto passado como argumento,
+# permitindo verificar se algo é int, str, list, etc.
+
+print(type(10))           #
+print(type("Python"))     #
+print(type([1, 2, 3]))    #
+
+# -----------------------------------------------------------------------------------
+# 8. enumerate()
+#  Transforma um iterável em um objeto que gera pares de índice,
+#  valor, útil para loops com contadores.
+
+animais = ["cachorro", "gato", "tigre"]
+for indice, animal in enumerate(animais):
+    print(indice, animal)
+
+# Saída:
+# 0 cachorro
+# 1 gato
+# 2 tigre
+
+# -----------------------------------------------------------------------------------
+# 9. zip()
+# Combina elementos de várias coleções (listas, tuplas, etc.) em grupos.
+# Ideal para percorrer vários iteráveis em paralelo.
+
+nomes = ["Ana", "Bruno", "Carla"]
+idades = [25, 30, 22]
+
+for nome, idade in zip(nomes, idades):
+    print(nome, idade)
+
+# Saída:
+# Ana 25
+# Bruno 30
+# Carla 22
+
+# -----------------------------------------------------------------------------------
+# 10. input()
+# Lê dados do usuário via terminal. Retorna uma string.
+# É comumente usada para criar interatividade em scripts.
+# Essas funções nativas são apenas uma pequena parte da extensa biblioteca de
+# funcionalidades que o Python traz por padrão.
+# Ao longo do curso vamos conhecendo novas funções.
+nome = input("Digite seu nome: ")
+print("Olá,", nome)
+
+# Sempre retorna string, então para converter em número, por exemplo:
+idade = int(input("Digite sua idade: "))
+print("Você tem", idade, "anos.")
+
