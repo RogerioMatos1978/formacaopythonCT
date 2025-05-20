@@ -38,6 +38,80 @@ print(saudacao.capitalize())# "Olá, mundo!"
 cores = "vermelho e AZUL"
 print(cores.capitalize())   # "Vermelho e azul"
 
+# ----------------------------------------------------------------------------------------------------------------------------
+# casefold()
+#
+# Definição
+# Converte a string para letras minúsculas de forma mais "agressiva" do que lower(), muito útil em comparações case-insensitive.
+#
+# Sintaxe
+# string.casefold()
+#
+# Parâmetros
+# Não possui parâmetros.
+
+# Exemplos
+texto = "Cubo Três"
+print(texto.casefold())       # "cubo três"
+
+msg = "OLÁ, MUNDO!"
+print(msg.casefold())         # "olá, mundo!"
+
+palavra = "Laennder"
+print(palavra.casefold())     # "laennder"
+
+frase_mista = "EsCoLa De DaDoS"
+print(frase_mista.casefold()) # "escola de dados"
+
+# ------------------------------------------------------------------------------
+# lower()
+#
+# Definição
+# Converte todos os caracteres alfabéticos da string para minúsculo.
+#
+# Sintaxe
+# string.lower()
+#
+# Parâmetros
+# Não possui parâmetros.
+#
+# Exemplos
+msg = "Olá, Mundo! Cubo Três"
+print(msg.lower())       # "olá, mundo! cubo três"
+
+titulo = "LAENNDER EM PYTHON"
+print(titulo.lower())    # "laennder em python"
+
+frase = "EScola DE DAdos"
+print(frase.lower())     # "escola de dados"
+
+print("".lower())        # ""
+
+# -------------------------------------------------------------------------------------------------
+# upper()
+#
+# Definição
+# Converte todos os caracteres alfabéticos da string para maiúsculo.
+#
+# Sintaxe
+# string.upper()
+#
+# Parâmetros
+# Não possui parâmetros.
+#
+# Exemplos
+
+texto = "python"
+print(texto.upper())           # "PYTHON"
+
+msg = "Olá, Mundo! Cubo Três"
+print(msg.upper())             # "OLÁ, MUNDO! CUBO TRÊS"
+
+frase = "escola de dados"
+print(frase.upper())           # "ESCOLA DE DADOS"
+
+print("".upper())              # ""
+
 
 # String
 nome = "Rogerio"
