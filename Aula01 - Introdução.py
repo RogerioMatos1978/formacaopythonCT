@@ -78,3 +78,41 @@ print("Olá, Mundo!")
 
 print("Olá Mundo!")
 
+# Indentação
+# Em Python, a indentação é fundamental para definir blocos de código. Ao contrário de outras linguagens que utilizam chaves,
+# Python utiliza espaços em branco para delimitar blocos.
+#
+# Exemplo correto:
+
+if 7 > 3:
+    print("Sete é maior que três!")
+
+# Exemplo com erro de indentação:
+
+if 7 > 3:
+print("Sete é maior que três!")
+
+# 4. Comentários em Python
+# Comentários são utilizados para explicar o código e são ignorados pelo interpretador. Eles começam com o símbolo #.
+#
+# Exemplo de comentário:
+# Este é um comentário
+print("Olá, Mundo!")  # Comentário após o código
+
+# Para comentários de várias linhas, utilize o símbolo # em cada linha ou uma string multilinha não atribuída:
+
+"""
+Este é um comentário
+de várias linhas.
+"""
+print("Olá, Mundo!")
+
+ # 5. Variáveis em Python
+# Variáveis são contêineres para armazenar dados. Em Python, não é necessário declarar o tipo da variável; ele é definido automaticamente quando um valor é atribuído.
+
+# Exemplo:
+
+idade = 37
+nome = "Laennder"
+print(idade)
+print(nome)
