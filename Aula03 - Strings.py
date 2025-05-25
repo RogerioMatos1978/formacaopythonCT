@@ -130,7 +130,6 @@ print("Olá, Mundo!".swapcase())# "oLÁ, mUNDO!"
 print("LAennder123".swapcase())# "laENNDER123"
 
 # title()
-# ↑ voltar ao topo
 # Definição
 # Converte o primeiro caractere de cada palavra para maiúsculo e o restante para minúsculo.
 #
@@ -149,7 +148,6 @@ print("VERMELHO E AZUL".title())              # "Vermelho E Azul"
 
 # 3. Verificação
 # isalnum()
-# ↑ voltar ao topo
 # Definição
 # Retorna True se todos os caracteres da string forem alfanuméricos (letras e números).
 #
@@ -166,7 +164,6 @@ print("Olá, Mundo!".isalnum()) # False (possui pontuação)
 print("Python_3".isalnum())    # False (possui underscore)
 
 # isalpha()
-# ↑ voltar ao topo
 # Definição
 # Retorna True se todos os caracteres da string forem letras.
 #
@@ -182,6 +179,188 @@ print("Escola3".isalpha())      # False (contém dígito)
 print("CUBOTRÊS".isalpha())     # True
 print("".isalpha())             # False (string vazia)
 
+# isascii()
+# Definição
+# Retorna True se todos os caracteres na string forem ASCII (intervalo 0 a 127).
+#
+# Sintaxe
+# string.isascii()
+#
+# Parâmetros
+# Não possui parâmetros.
+#
+# Exemplos
+print("Ola Mundo".isascii())   # True
+print("Cubo Três".isascii())   # False (caractere 'é' não é ASCII)
+print("Python3.9".isascii())   # True
+print("∑".isascii())           # False
+
+# isdecimal()
+# Definição
+# Retorna True se todos os caracteres na string forem decimais (0-9).
+#
+# Sintaxe
+# string.isdecimal()
+#
+# Parâmetros
+# Não possui parâmetros.
+#
+# Exemplos
+print("123".isdecimal())       # True
+print("2023".isdecimal())      # True
+print("3.14".isdecimal())      # False (ponto)
+print("٢٥".isdecimal())        # True (dígito árabe para 25)
+
+# isdigit()
+# Definição
+# Retorna True se todos os caracteres na string forem dígitos (inclui caracteres como "²", "½" etc.).
+#
+# Sintaxe
+# string.isdigit()
+#
+# Parâmetros
+# Não possui parâmetros.
+#
+# Exemplos
+print("123".isdigit())         # True
+print("Cubo3".isdigit())       # False
+print("½".isdigit())           # True (caractere de fração)
+print("٢٥".isdigit())          # True (dígitos árabes)
+
+# isidentifier()
+# Definição
+# Retorna True se a string for um identificador válido em Python (nome de variável, por exemplo).
+#
+# Sintaxe
+# string.isidentifier()
+#
+# Parâmetros
+# Não possui parâmetros.
+#
+# Exemplos
+print("cubo_tres".isidentifier())   # True
+print("3laennder".isidentifier())   # False (inicia com dígito)
+print("Python".isidentifier())      # True
+print("def".isidentifier())         # True, mas é palavra reservada
+
+# islower()
+# Definição
+# Retorna True se todos os caracteres alfabéticos da string estiverem em minúsculo.
+#
+# Sintaxe
+# string.islower()
+#
+# Parâmetros
+# Não possui parâmetros.
+#
+# Exemplos
+print("cubo três".islower())   # True
+print("Laennder".islower())    # False
+print("python2023".islower())  # True (dígitos não afetam)
+print("".islower())            # False (vazia)
+
+# isnumeric()
+# Definição
+# Retorna True se todos os caracteres forem numéricos (incluindo dígitos, frações, subscritos etc.).
+#
+# Sintaxe
+# string.isnumeric()
+#
+# Parâmetros
+# Não possui parâmetros.
+#
+# Exemplos
+print("1234".isnumeric())    # True
+print("⅕".isnumeric())       # True (caractere de fração)
+print("Cubo3".isnumeric())   # False (letras)
+print("٢٥".isnumeric())      # True (dígitos árabes)
+
+
+# isprintable()
+# Definição
+# Retorna True se todos os caracteres da string forem imprimíveis ou se a string estiver vazia.
+#
+# Sintaxe
+# string.isprintable()
+#
+# Parâmetros
+# Não possui parâmetros.
+#
+# Exemplos
+print("Olá, Mundo!".isprintable())  # True
+print("Cubo Três\nLaennder".isprintable()) # False (\n não é imprimível)
+print("   ".isprintable())         # True (espaços são imprimíveis)
+print("".isprintable())            # True (vazia)
+
+# isspace()
+# Definição
+# Retorna True se todos os caracteres da string forem espaços em branco (espaço, tab, nova linha etc.).
+#
+# Sintaxe
+# string.isspace()
+#
+# Parâmetros
+# Não possui parâmetros.
+#
+# Exemplos
+print("   ".isspace())     # True
+print("\n\t".isspace())    # True
+print(" Laennder ".isspace())  # False (possui texto)
+print("".isspace())        # False
+
+# istitle()
+# Definição
+# Retorna True se cada palavra na string começar com letra maiúscula e as demais letras estiverem em minúsculo.
+#
+# Sintaxe
+# string.istitle()
+#
+# Parâmetros
+# Não possui parâmetros.
+#
+# Exemplos
+print("Cubo Três Laennder".istitle()) # True
+print("Escola de Dados".istitle())    # False ("de" não está capitalizado)
+print("Olá, Mundo!".istitle())        # True
+print("PYTHON".istitle())             # False
+
+# isupper()
+# Definição
+# Retorna True se todos os caracteres alfabéticos da string estiverem em maiúsculo.
+#
+# Sintaxe
+# string.isupper()
+#
+# Parâmetros
+# Não possui parâmetros.
+#
+# Exemplos
+print("CUBO TRÊS".isupper())   # True
+print("Olá, Mundo!".isupper()) # False
+print("PYTHON3".isupper())     # True (dígitos não influenciam)
+print("".isupper())            # False
+
+
+# 4. Busca e Localização
+# find()
+# Definição
+# Retorna o índice da primeira ocorrência de uma substring na string. Retorna -1 se não for encontrada.
+#
+# Sintaxe
+# string.find(value[, start[, end]])
+#
+# Parâmetros
+# value: substring a ser encontrada.
+# start (opcional): índice inicial da busca.
+# end (opcional): índice final da busca.
+# Exemplos
+texto = "Olá, Mundo! Olá, Mundo! Escola de Dados"
+print(texto.find("Mundo"))      # 5
+print(texto.find("Mundo", 6))   # 17
+print(texto.find("Python"))     # -1 (não encontrado)
+
+frase2 = "Laennder, Cubo Três, Laennder"
+print(frase2.find("Laennder", 1)) # 18
 
 # String
 nome = "Rogerio"
