@@ -45,4 +45,36 @@
 # Muitos computadores já possuem Python instalado. Para verificar no Windows, abra o cmd.exe e execute:
 #
 # python --version
+# Se não estiver instalado, você pode baixá-lo gratuitamente em: python.org.
+
+# Seu Primeiro Programa
+# Para executar um programa Python, usando o IDLE, crie um arquivo com a extensão .py e escreva o código.
+# Por exemplo, crie um arquivo chamado Exemplo01.py com o conteúdo:
+print("Olá, Mundo!")
+
+# Em seguida, execute o código, clicando em Run ou pressionando F5. A saída deverá ser:
+
+# Olá, Mundo!
+
+# Você também pode utilizar interpretadores online para testar seu código sem instalar nada.
+
+# Executando o Interpretador Python
+
+# Para testar comandos rapidamente, execute o Python diretamente na linha de comando:
+
+# python
+#
+# Caso o comando python não funcione, tente:
+#
+# py
+#
+# Para sair do interpretador, digite:
+#
+# exit()
+
+# 3. Sintaxe do Python
+# Execução de Código
+# Você pode escrever código Python diretamente no interpretador ou em arquivos com a extensão .py e executá-los na linha de comando. Exemplo simples:
+
+print("Olá Mundo!")
 
