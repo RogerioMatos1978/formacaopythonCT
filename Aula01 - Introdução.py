@@ -152,3 +152,81 @@ meunome2 = "Laennder"
 # 2meunome = "Laennder"
 # meu-nome = "Laennder"
 # meu nome = "Laennder"
+
+# Atribuição Múltipla
+# Python permite atribuir valores a várias variáveis em uma única linha:
+
+x, y, z = "Laennder", "Matheus", "Ketlyn"
+print(x)
+print(y)
+print(z)
+
+# Ou atribuir o mesmo valor a múltiplas variáveis:
+
+x = y = z = "Matheus"
+print(x)
+print(y)
+print(z)
+
+# É possível também desempacotar coleções:
+
+carros = ["Gol", "Onix", "Creta"]
+x, y, z = carros
+print(x)
+print(y)
+print(z)
+
+# 6. Saída de Dados
+# A função print() é utilizada para exibir variáveis e mensagens na tela.
+
+# Exemplo usando vírgulas (que permite diferentes tipos de dados):
+x = "Python"
+y = "é"
+z = "incrível"
+print(x, y, z)
+
+# Exemplo de concatenação de strings:
+
+x = "Cubo Três "
+y = "é a "
+z = "melhor Escola!"
+print(x + y + z)
+
+# Ao combinar strings e números, separe-os por vírgula:
+idade = 37
+nome = "Laennder"
+print(nome, idade)
+
+# É possível utilizar f-strings para criar máscaras nas saídas de dados:
+idade = 37
+nome = "Laennder"
+print(f"Meu nome é {nome} e minha idade é {idade}")
+
+# Por padrão, a função print gera uma quebra de linha ao final, mas é possível substituir esse comportamento.
+idade = 37
+nome = "Laennder"
+print(f"Meu nome é {nome}", end=" ")
+print(f"e minha idade é {idade}", end="\n")
+
+# 7. Tipos de Dados em Python
+# Python possui diversos tipos de dados embutidos. Nesta aula focamos em 4 tipos primitivos.
+#
+# Textos: str
+# Números: int, float
+# Booleanos: bool
+# Para obter o tipo de um objeto, utilize a função type():
+idade = 37
+print(type(idade))
+
+# Ao atribuir um valor a uma variável, o tipo é definido automaticamente:
+
+x = "Olá Mundo"   # str
+x = 20            # int
+x = 20.5          # float
+x = True          # bool
+
+# Para definir explicitamente um tipo, use as funções construtoras:
+
+x = str("Olá Mundo")
+x = int(20)
+x = float(20.5)
