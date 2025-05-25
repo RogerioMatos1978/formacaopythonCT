@@ -89,8 +89,8 @@ if 7 > 3:
 
 # Exemplo com erro de indentação:
 
-if 7 > 3:
-print("Sete é maior que três!")
+# if 7 > 3:
+# print("Sete é maior que três!")
 
 # 4. Comentários em Python
 # Comentários são utilizados para explicar o código e são ignorados pelo interpretador. Eles começam com o símbolo #.
