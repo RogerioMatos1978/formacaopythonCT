@@ -116,3 +116,39 @@ idade = 37
 nome = "Laennder"
 print(idade)
 print(nome)
+
+# Você pode converter tipos (casting) usando funções como str(), int() e float():
+
+x = str(3)    # x será '3'
+y = int(3)    # y será 3
+z = float(3)  # z será 3.0
+
+# Para verificar o tipo de uma variável, utilize a função type():
+
+x = 5
+print(type(x))
+
+# Nomes de Variáveis
+
+# Regras para nomes de variáveis:
+#
+# Devem iniciar com uma letra ou underscore (_).
+# Não podem começar com números.
+# Podem conter apenas caracteres alfanuméricos e underscores.
+# São case-sensitive (diferenciam maiúsculas de minúsculas).
+# Não podem ser palavras reservadas do Python.
+
+# Exemplos de nomes válidos:
+
+meunome = "Laennder"
+meu_nome = "Laennder"
+_meu_nome = "Laennder"
+meuNome = "Laennder"
+MEUNOME = "Laennder"
+meunome2 = "Laennder"
+
+# Exemplos de nomes inválidos:
+
+# 2meunome = "Laennder"
+# meu-nome = "Laennder"
+# meu nome = "Laennder"
