@@ -124,8 +124,6 @@ Matos
 """
 print(nomeCompleto)
 
-
-
 nomes = ["Rogerio", "Alicya" , "Maria", "Matos", "Santos"]
 for i in sorted(nomes):
     print(i)
