@@ -927,9 +927,151 @@ cores = "vermelho\tazul\tamarelo"
 print(cores.expandtabs(6))
 
 
+# Trabalhando com Strings em Python
 
+# Em Python, strings são sequências de caracteres (Unicode) cercadas por aspas simples ou duplas.
+# Elas formam uma base essencial para manipular textos, mensagens e dados no dia a dia de um programador.
+# Neste guia, veremos não apenas como criá-las e manipulá-las, mas
+# também algumas técnicas importantes para trabalhar com trechos específicos de strings (fatiamento).
 
+# 1. Criando Strings
+# Você pode criar strings com aspas simples ou duplas.
+# Dentro de uma string, se as aspas internas forem iguais às externas,
+# ocorrerá erro de sintaxe — por isso, é comum alternar o uso de aspas para representar
+# textos que contenham citações.
 # String
+
+print("Olá")
+print('Mundo')
+
+print("É importante aprender Python.")
+print('Ela disse "Bom dia!"')
+print("Ele respondeu 'Tudo bem?'")
+
+# Em Python, não é necessário declarar o tipo da variável antes de usá-la. Ao atribuir qualquer texto a uma variável,
+# ela automaticamente será do tipo str.
+
+# 2. Atribuindo Strings a Variáveis
+# Basta usar o operador de atribuição = para armazenar uma string em uma variável.
+# Dessa forma, você pode reutilizar o conteúdo da string em
+#  várias partes do código, tornando-o mais organizado e manutenível.
+mensagem = "Olá, Mundo!"
+print(mensagem)
+
+# 3. Strings com Múltiplas Linhas
+# Utilize três aspas (simples ou duplas) para criar strings que ocupam mais de uma linha.
+# As quebras de linha na string final respeitam a forma como foram escritas no código.
+# Você também pode usar esse recurso para escrever “docstrings” em funções, servindo como documentação.
+texto_longo = """Este é um texto
+que se estende por
+várias linhas em Python."""
+print(texto_longo)
+
+outro_texto = '''Podemos usar
+aspas simples
+sem problemas.'''
+print(outro_texto)
+
+# 4. Strings como Arrays
+# Em Python, cada caractere de uma string pode ser acessado via
+# índices (começando em 0), como se a string fosse um array de caracteres.
+
+texto = "Boa noite!"
+print(texto[2])  # Exibe o caractere no índice 2 ('a')
+# Também é possível percorrer as letras de uma string com
+# um laço for para realizar operações em cada caractere individualmente.
+# Saber o tamanho exato de uma string ajuda a validar dados,
+# a cortar textos ou até mesmo a navegar pelos índices disponíveis.
+for letra in "banana":
+    print(letra)
+
+# 5. Tamanho da String
+texto = "Boa noite!"
+print(len(texto))  # Exibe 10
+
+# 6. Verificando Substrings
+
+# Use o operador in para verificar
+# se uma substring está presente em uma string. Use not in para o inverso.
+# Essa verificação é útil para buscas e filtragens de texto, por exemplo, em pesquisas de palavras-chave.
+frase = "Os melhores dias estão sempre por vir."
+print("melhores" in frase)  # True
+print("piores" in frase)    # False
+
+if "dias" in frase:
+    print("A palavra 'dias' está presente.")
+
+if "nunca" not in frase:
+    print("A palavra 'nunca' não está presente.")
+
+
+# 7. Slicing (Fatiamento)
+# O fatiamento em Python permite selecionar uma parte de uma sequência (como uma string) usando a sintaxe:
+# sequencia[início:fim:passo]
+# Quando você omite o início, o fatiamento começa do primeiro caractere. Quando omite o fim, ele vai até o último
+# caractere da string. Já o passo indica de quantos em quantos caracteres você deseja avançar (padrão é 1).
+
+saudacao = "Olá, Mundo!"
+print(saudacao[1:4])      # "lá,"
+print(saudacao[:5])       # "Olá,"
+print(saudacao[3:])       # ", Mundo!"
+print(saudacao[1:10:2])   # l,Mno  (pula de 2 em 2 caracteres)
+
+# Você também pode usar índices negativos,
+# em que -1 representa o último caractere, -2 o penúltimo, e assim por diante.
+# Usando índices negativos:
+print(saudacao[-6:-1])  # "Mundo"
+
+# Além disso, quando o passo (terceiro argumento) é negativo, o fatiamento inverte a ordem da string. Por exemplo:
+palavra = "Python"
+print(palavra[::-1])  # "nohtyP"
+
+# Esse truque de usar [::-1] é muito útil para inverter uma string por completo. Ele também costuma ser aplicado
+# para verificar se uma palavra é um palíndromo (lida da mesma forma de trás para frente). Veja o exemplo:
+palavra = "radar"
+if palavra == palavra[::-1]:
+    print("É um palíndromo!")
+else:
+    print("Não é um palíndromo.")
+
+# Neste caso, como "radar" invertido também é "radar", a mensagem exibida é "É um palíndromo!".
+# Assim, você pode extrair ou inverter exatamente os caracteres
+# desejados de uma string de forma muito flexível e poderosa
+
+# --------------------------------------------------------------------------------------------------------------
+# 8. Métodos de Modificação
+# Python fornece diversos métodos para transformar e ajustar o conteúdo textual de forma prática.
+# Alguns exemplos comuns incluem a remoção de espaços desnecessários, substituição de
+# trechos do texto e divisão de uma string em componentes.
+# Isso facilita consideravelmente o processamento de dados.
+
+# 8.1 upper()
+# Converte todos os caracteres para maiúsculas.
+texto = "olá, mundo!"
+print(texto.upper())  # "OLÁ, MUNDO!"
+
+# 8.2 lower()
+# Converte todos os caracteres para minúsculas.
+texto = "Boa Tarde!"
+print(texto.lower())  # "boa tarde!"
+
+# 8.3 strip()
+# Remove espaços em branco(ou caracteres específicos) no início e  no final da string.
+texto = "   Espaços adicionais   "
+print(texto.strip())  # "Espaços adicionais"
+
+# 8.4 replace()
+# Substitui parte da string por outra.
+frase = "Eu gosto de Python!"
+print(frase.replace("Python", "programar"))
+
+# 8.5 split()
+# Divide a string em uma lista, de acordo com um delimitador.
+mensagem = "Python, é, incrível"
+partes = mensagem.split(",")
+print(partes)  # ['Python', ' é', ' incrível']
+
+
 nome = "Rogerio"
 # Toda String é uma Lista
 nomeCompleto = """
@@ -939,6 +1081,8 @@ da Silva
 Matos
 """
 print(nomeCompleto)
+
+
 
 nomes = ["Rogerio", "Alicya" , "Maria", "Matos", "Santos"]
 for i in sorted(nomes):
