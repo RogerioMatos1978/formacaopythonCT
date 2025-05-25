@@ -641,6 +641,290 @@ lista_cores = "vermelho,azul,amarelo,verde"
 print(lista_cores.rsplit(",", 1))  # ['vermelho,azul,amarelo', 'verde']
 print(lista_cores.rsplit(",", 2))  # ['vermelho,azul', 'amarelo', 'verde']
 
+# splitlines()
+# Definição
+# Divide a string onde houver quebras de linha, retornando uma lista de linhas.
+#
+# Sintaxe
+# string.splitlines(keepends=False)
+#
+# Parâmetros
+# keepends (opcional): se True, mantém os caracteres de quebra de linha no resultado.
+#
+# Exemplos
+texto = "Cubo Três\nLaennder\nEscola de Dados"
+print(texto.splitlines())           # ['Cubo Três', 'Laennder', 'Escola de Dados']
+print(texto.splitlines(True))       # ['Cubo Três\n', 'Laennder\n', 'Escola de Dados']
+
+multilinha = "Olá, Mundo!\rCores\rObjetos"
+print(multilinha.splitlines())      # ['Olá, Mundo!', 'Cores', 'Objetos']
+
+vazio = ""
+print(vazio.splitlines())           # []
+#
+# join()
+# Definição
+# Concatena cada item de um iterável usando a string como separador.
+#
+# Sintaxe
+# string.join(iterable)
+#
+# Parâmetros
+# iterable: objeto iterável cujos elementos sejam strings.
+#
+# Exemplos
+lista = ["Cubo", "Três", "Laennder"]
+print(" ".join(lista))             # "Cubo Três Laennder"
+
+hobbies = ("Python", "Dados", "Jogos")
+print("-".join(hobbies))           # "Python-Dados-Jogos"
+
+chars = ['O', 'l', 'á', ',', ' ', 'M', 'u', 'n', 'd', 'o', '!']
+print("".join(chars))              # "Olá, Mundo!"
+
+frutas = ["maçã", "banana", "uva"]
+print(", ".join(frutas))           # "maçã, banana, uva"
+
+# 7. Strip e Alinhamento
+# strip()
+# Definição
+# Remove caracteres especificados (ou espaços em branco por padrão) do início e do final da string.
+#
+# Sintaxe
+# string.strip([chars])
+#
+# Parâmetros
+# chars (opcional): caracteres a remover. Se omitido, remove espaços.
+#
+# Exemplos
+texto = "   Python   "
+print(texto.strip())          # "Python"
+
+desc = "###CuboTrês###"
+print(desc.strip("#"))        # "CuboTrês"
+
+frase = "abcLaennderabc"
+print(frase.strip("abc"))     # "Laennder"
+
+saudacao = "!!!Olá, Mundo!!!"
+print(saudacao.strip("!"))    # "Olá, Mundo"
+
+
+# lstrip()
+# Definição
+# Remove caracteres especificados (ou espaços em branco por padrão) do início da string.
+#
+# Sintaxe
+# string.lstrip([chars])
+#
+# Parâmetros
+# chars (opcional): caracteres a remover. Se não informado, remove espaços em branco.
+#
+# Exemplos
+texto = "   Python   "
+print(texto.lstrip())          # "Python   "
+
+titulo = "###EscolaDeDados###"
+print(titulo.lstrip("#"))      # "EscolaDeDados###"
+
+frase = "abcCuboTrêsabc"
+print(frase.lstrip("abc"))     # "CuboTrêsabc"
+
+saudacao = "___Olá, Mundo!"
+print(saudacao.lstrip("_"))    # "Olá, Mundo!"
+
+
+# center()
+# Definição
+# Retorna a string centralizada em um espaço de comprimento especificado, preenchendo as extremidades com caracteres opcionais.
+#
+# Sintaxe
+# string.center(width[, fillchar])
+#
+# Parâmetros
+# width: comprimento total desejado.
+# fillchar (opcional): caractere usado para preencher (padrão é espaço).
+# Exemplos
+texto = "Python"
+print(texto.center(10))         # "  Python  "
+print(texto.center(10, "-"))    # "--Python--"
+
+projeto = "Cubo Três"
+print(projeto.center(15, "*"))  # "***Cubo Três***"
+
+saudacao = "Olá, Mundo!"
+print(saudacao.center(20, ".")) # "....Olá, Mundo!....."
+
+# ljust()
+# Definição
+# Retorna uma versão da string alinhada à esquerda em um comprimento especificado, preenchendo com caracteres opcionais.
+#
+# Sintaxe
+# string.ljust(width[, fillchar])
+#
+# Parâmetros
+# width: comprimento total desejado.
+# fillchar (opcional): caractere de preenchimento.
+# Exemplos
+texto = "Python"
+print(texto.ljust(10))         # "Python    "
+print(texto.ljust(10, "-"))    # "Python----"
+
+org = "Cubo"
+print(org.ljust(8, "*"))       # "Cubo****"
+
+nome = "Dados"
+print(nome.ljust(7, "."))      # "Dados.."
+
+# rjust()
+# Definição
+# Retorna uma versão da string alinhada à direita em um comprimento especificado, preenchendo com caracteres opcionais.
+#
+# Sintaxe
+# string.rjust(width[, fillchar])
+#
+# Parâmetros
+# width: comprimento desejado.
+# fillchar (opcional): caractere de preenchimento.
+# Exemplos
+texto = "Python"
+print(texto.rjust(10))        # "    Python"
+print(texto.rjust(10, "*"))   # "****Python"
+
+nome = "Cubo"
+print(nome.rjust(8, "!"))     # "!!!!Cubo"
+
+lang = "Dados"
+print(lang.rjust(7, "-"))     # "--Dados"
+
+# zfill()
+# Definição
+# Preenche a string à esquerda com zeros até atingir o tamanho especificado.
+#
+# Sintaxe
+# string.zfill(width)
+#
+# Parâmetros
+# width: comprimento desejado da nova string.
+#
+# Exemplos
+print("42".zfill(5))          # "00042"
+print("cubo".zfill(8))        # "0000cubo"
+print("".zfill(3))            # "000"
+print("-42".zfill(5))         # "-0042"
+
+# 8. Outros
+# partition()
+# Definição
+# Divide a string em uma tupla de três elementos: antes do separador, o separador em si e o que vem depois dele.
+# Se o separador não for encontrado, retorna a string completa seguida de duas strings vazias.
+#
+# Sintaxe
+# string.partition(separator)
+#
+# Parâmetros
+# separator: a substring que funcionará como delimitador.
+#
+# Exemplos
+texto = "Cubo Três e Laennder"
+print(texto.partition("e"))
+# ('Cubo Três ', 'e', ' Laennder')
+
+print(texto.partition("Python"))
+# ('Cubo Três e Laennder', '', '')
+
+frase = "Olá, Mundo!"
+print(frase.partition(","))
+# ('Olá', ',', ' Mundo!')
+
+print("abc".partition("b"))
+# ('a', 'b', 'c')
+
+# rpartition()
+# Definição
+# Similar a partition(), mas inicia a busca a partir do final da string, dividindo em três partes. Retorna (parte_anterior, separador, parte_posterior).
+#
+# Sintaxe
+# string.rpartition(separator)
+#
+# Parâmetros
+# separator: a substring que funcionará como delimitador.
+#
+# Exemplos
+texto = "Python, Cubo Três, Laennder, Cubo Três"
+print(texto.rpartition("Cubo Três"))
+# ('Python, Cubo Três, Laennder, ', 'Cubo Três', '')
+
+print(texto.rpartition("Java"))
+# ('', '', 'Python, Cubo Três, Laennder, Cubo Três')
+
+print("abc".rpartition("b"))
+# ('a', 'b', 'c')
+
+# count()
+# Definição
+# Retorna o número de vezes que um valor específico aparece na string.
+#
+# Sintaxe
+# string.count(value[, start[, end]])
+#
+# Parâmetros
+# value: substring a ser buscada.
+# start (opcional): posição inicial para a busca.
+# end (opcional): posição final para a busca.
+# Exemplos
+frase = "Laennder e Cubo Três, parceria e Cubo Três"
+print(frase.count("Cubo Três"))       # Conta quantas vezes "Cubo Três" aparece
+
+print(frase.count("e"))               # Conta quantas vezes "e" aparece
+print(frase.count("e", 9, 25))        # Conta "e" apenas num intervalo
+
+escola = "Escola de Dados e Escola de Dados"
+print(escola.count("Escola de Dados"))# 2
+
+# encode()
+# Definição
+# Retorna uma versão codificada da string, usando a codificação especificada.
+#
+# Sintaxe
+# string.encode(encoding="utf-8", errors="strict")
+#
+# Parâmetros
+# encoding (opcional): padrão "utf-8".
+# errors (opcional): define como lidar com erros de codificação ("strict", "ignore", "replace" etc.).
+# Exemplos
+texto = "Cubo Três e Laennder"
+encoded_utf8 = texto.encode()  # UTF-8 por padrão
+print(encoded_utf8)
+
+encoded_ascii = texto.encode("ascii", errors="ignore")
+print(encoded_ascii)
+
+encoded_replace = texto.encode("ascii", errors="replace")
+print(encoded_replace)
+
+# Decodificando novamente, se possível
+decoded = encoded_utf8.decode("utf-8")
+print(decoded)
+
+# expandtabs()
+# Definição
+# Define o tamanho das tabulações \t na string.
+#
+# Sintaxe
+# string.expandtabs(tabsize=8)
+#
+# Parâmetros
+# tabsize (opcional): número de espaços para cada \t. O padrão é 8.
+#
+# Exemplos
+texto = "Cubo\tTrês\tLaennder"
+print(texto.expandtabs(4))
+print(texto.expandtabs(2))
+print(texto.expandtabs(10))
+
+cores = "vermelho\tazul\tamarelo"
+print(cores.expandtabs(6))
 
 
 
