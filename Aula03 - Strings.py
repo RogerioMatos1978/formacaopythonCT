@@ -362,6 +362,289 @@ print(texto.find("Python"))     # -1 (não encontrado)
 frase2 = "Laennder, Cubo Três, Laennder"
 print(frase2.find("Laennder", 1)) # 18
 
+# rfind()
+# Definição
+# Busca a substring e retorna o índice da última ocorrência. Retorna -1 se não for encontrada.
+#
+# Sintaxe
+# string.rfind(value[, start[, end]])
+#
+# Parâmetros
+# value: substring a ser buscada.
+# start (opcional)
+# end (opcional)
+# Exemplos
+texto = "banana"
+print(texto.rfind("a"))       # 5
+print(texto.rfind("an"))      # 3
+print(texto.rfind("x"))       # -1
+print(texto.rfind("a", 0, 3)) # 1 (entre índices 0 e 2)
+
+frase = "Cubo Três, Laennder, Cubo Três"
+print(frase.rfind("Cubo Três")) # índice da última ocorrência
+
+# index()
+# Definição
+# Retorna o índice da primeira ocorrência de uma substring, lançando ValueError se não encontrada. É semelhante a find(), porém gera exceção ao invés de retornar -1.
+#
+# Sintaxe
+# string.index(value[, start[, end]])
+#
+# Parâmetros
+# value: substring a ser encontrada.
+# start (opcional)
+# end (opcional)
+# Exemplos
+texto = "Python na Cubo Três"
+print(texto.index("Cubo"))  # 10
+
+try:
+    print(texto.index("Laennder"))
+except ValueError:
+    print("Substring não encontrada!")
+
+print(texto.index("n", 2, 8))  # 5
+
+# rindex()
+# Definição
+# Similar a rfind(), mas retorna ValueError se a substring não for encontrada.
+#
+# Sintaxe
+# string.rindex(value[, start[, end]])
+#
+# Parâmetros
+# value
+# start (opcional)
+# end (opcional)
+# Exemplos
+texto = "banana"
+print(texto.rindex("a"))   # 5
+
+try:
+    print(texto.rindex("x"))
+except ValueError:
+    print("Substring não encontrada!")
+
+frase = "Cubo Três e Cubo Três"
+print(frase.rindex("Cubo"))  # índice da última ocorrência de "Cubo"
+
+# startswith()
+# Definição
+# Retorna True se a string começar com o valor especificado.
+#
+# Sintaxe
+# string.startswith(value[, start[, end]])
+#
+# Parâmetros
+# value: substring a verificar.
+# start (opcional): índice inicial.
+# end (opcional): índice final.
+# Exemplos
+texto = "Cubo Três e Laennder"
+print(texto.startswith("Cubo"))   # True
+print(texto.startswith("Laennder"))  # False
+
+saudacao = "Olá, Mundo!"
+print(saudacao.startswith("Olá"))   # True
+print(saudacao.startswith(",", 3))   # True (verifica a partir do índice 3)
+
+# endswith()
+# Definição
+# Retorna True se a string terminar com o valor especificado.
+#
+# Sintaxe
+# string.endswith(value[, start[, end]])
+#
+# Parâmetros
+# value: substring a verificar.
+# start (opcional): índice inicial para verificação.
+# end (opcional): índice final para verificação.
+# Exemplos
+arquivo = "relatorio.pdf"
+print(arquivo.endswith(".pdf"))   # True
+
+banner = "Escola de Dados - Cubo Três"
+print(banner.endswith("Cubo Três"))         # True
+print(banner.endswith("Dados", 0, 17))      # True
+
+saudacao = "Olá, Mundo!"
+print(saudacao.endswith("!"))               # True
+
+# endswith()
+# Definição
+# Retorna True se a string terminar com o valor especificado.
+#
+# Sintaxe
+# string.endswith(value[, start[, end]])
+#
+# Parâmetros
+# value: substring a verificar.
+# start (opcional): índice inicial para verificação.
+# end (opcional): índice final para verificação.
+# Exemplos
+arquivo = "relatorio.pdf"
+print(arquivo.endswith(".pdf"))   # True
+
+banner = "Escola de Dados - Cubo Três"
+print(banner.endswith("Cubo Três"))         # True
+print(banner.endswith("Dados", 0, 17))      # True
+
+saudacao = "Olá, Mundo!"
+print(saudacao.endswith("!"))               # True
+
+# format_map()
+# Definição
+# Similar a format(), mas recebe um dicionário (ou map) para formatar a string com chaves correspondentes.
+#
+# Sintaxe
+# string.format_map(mapping)
+#
+# Parâmetros
+# mapping: dicionário ou objeto que contenha as chaves de substituição.
+#
+# Exemplos
+dados = {"nome": "Cubo Três", "curso": "Escola de Dados"}
+frase = "Bem-vindo ao {nome}, parte da {curso}!"
+print(frase.format_map(dados))
+
+class Map(dict):
+    def __missing__(self, key):
+        return "N/A"
+
+map_test = Map(nome="Laennder")
+print("Olá, {nome} e {amigo}!".format_map(map_test))
+# amigo não está definido, retorna "N/A"
+
+coordenadas = {"x": 10, "y": 20}
+print("Coordenadas: x={x}, y={y}".format_map(coordenadas))
+
+
+# replace()
+# Definição
+# Retorna uma string onde um valor especificado é substituído por outro valor especificado.
+#
+# Sintaxe
+# string.replace(old, new[, count])
+#
+# Parâmetros
+# old: substring a ser substituída.
+# new: nova substring.
+# count (opcional): número máximo de substituições.
+# Exemplos
+texto = "Olá, Mundo! Olá, Mundo!"
+print(texto.replace("Mundo", "Cubo Três"))
+# "Olá, Cubo Três! Olá, Cubo Três!"
+
+print(texto.replace("Olá", "Laennder", 1))
+# Substitui apenas a primeira ocorrência
+
+frase = "Python na Escola de Dados"
+print(frase.replace("Escola de Dados", "Laennder"))
+
+cores = "vermelho, vermelho, azul"
+print(cores.replace("vermelho", "amarelo", 1))
+
+# translate()
+# Definição
+# Retorna a string traduzida de acordo com a tabela passada, normalmente gerada por maketrans().
+#
+# Sintaxe
+# string.translate(table)
+#
+# Parâmetros
+# table: tabela de tradução obtida via str.maketrans() ou dicionário.
+#
+# Exemplos
+tabela = str.maketrans("aeiou", "12345")
+texto = "cubo tres laennder"
+print(texto.translate(tabela)) # "c5b4 tr2s l13nnd2r"
+
+# Exemplo com remoção de caracteres
+tabela2 = str.maketrans("", "", "!")
+saudacao = "Olá, Mundo!!!"
+print(saudacao.translate(tabela2)) # "Olá, Mundo"
+
+dic = {ord('C'): 'K', ord('T'): 'D'}
+print("Cubo Três".translate(dic))  # "Kubo Drês"
+
+# maketrans()
+# Definição
+# Retorna uma tabela de tradução que pode ser usada pelo método translate().
+#
+# Sintaxe
+# str.maketrans(x, y=None, z=None)
+#
+# Parâmetros
+# Se x e y forem strings de mesmo tamanho, cria-se um mapeamento de cada caractere de x para o caractere em y.
+# z é uma string com caracteres a serem removidos.
+# Também pode receber um dicionário de mapeamentos.
+# Exemplos
+# Exemplo 1: x e y
+tabela = str.maketrans("abc", "xyz")
+texto = "abcCuboTrês"
+print(texto.translate(tabela))  # "xyzCuxoTrês"
+
+# Exemplo 2: usando z para remover
+tabela2 = str.maketrans("", "", " ")
+texto2 = "Olá, Mundo! Cubo Três"
+print(texto2.translate(tabela2)) # "Olá,Mundo!CuboTrês"
+
+# Exemplo 3: dicionário de mapeamento
+tabela3 = str.maketrans({ord('E'): '3', ord('D'): 'd'})
+print("EscolaDeDados".translate(tabela3)) # "3scoladedados"
+
+# Exemplo 4
+tabela4 = str.maketrans("Cubo", "Data")
+print("Cubo Três!".translate(tabela4))     # "Data Três!"
+
+# 6. Divisão e União
+# split()
+#
+# Definição
+# Divide a string em uma lista, usando um separador especificado. Se não for passado um separador, divide pelos espaços em branco.
+#
+# Sintaxe
+# string.split(separator=None, maxsplit=-1)
+#
+# Parâmetros
+# separator (opcional): separador.
+# maxsplit (opcional): número máximo de divisões.
+# Exemplos
+frase = "Cubo Três Escola de Dados"
+print(frase.split())             # ['Cubo', 'Três', 'Escola', 'de', 'Dados']
+
+cores = "vermelho,azul,amarelo"
+print(cores.split(","))          # ['vermelho', 'azul', 'amarelo']
+
+texto = "banana"
+print(texto.split("a"))          # ['', 'b', 'n', 'n', '']
+
+nome = "Laennder Cubo Três"
+print(nome.split(maxsplit=1))    # ['Laennder', 'Cubo Três']
+
+# rsplit()
+# Definição
+# Divide a string a partir do final, retornando uma lista de substrings. É semelhante a split(), mas pode ser útil quando se especifica o parâmetro maxsplit.
+#
+# Sintaxe
+# string.rsplit(separator=None, maxsplit=-1)
+#
+# Parâmetros
+# separator (opcional): delimitador (padrão é espaço).
+# maxsplit (opcional): número máximo de divisões.
+# Exemplos
+texto = "Cubo Três Laennder Escola de Dados"
+print(texto.rsplit())              # ['Cubo', 'Três', 'Laennder', 'Escola', 'de', 'Dados']
+print(texto.rsplit(maxsplit=2))    # ['Cubo Três Laennder', 'Escola', 'de Dados']
+
+lista_cores = "vermelho,azul,amarelo,verde"
+print(lista_cores.rsplit(",", 1))  # ['vermelho,azul,amarelo', 'verde']
+print(lista_cores.rsplit(",", 2))  # ['vermelho,azul', 'amarelo', 'verde']
+
+
+
+
+
 # String
 nome = "Rogerio"
 # Toda String é uma Lista
