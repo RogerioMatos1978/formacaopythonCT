@@ -112,6 +112,76 @@ print(frase.upper())           # "ESCOLA DE DADOS"
 
 print("".upper())              # ""
 
+# swapcase()
+#
+# Definição
+# Converte letras maiúsculas em minúsculas e vice-versa.
+#
+# Sintaxe
+# string.swapcase()
+#
+# Parâmetros
+# Não possui parâmetros.
+#
+# Exemplos
+print("Python".swapcase())     # "pYTHON"
+print("CUBO três".swapcase())  # "cubo TRÊS"
+print("Olá, Mundo!".swapcase())# "oLÁ, mUNDO!"
+print("LAennder123".swapcase())# "laENNDER123"
+
+# title()
+# ↑ voltar ao topo
+# Definição
+# Converte o primeiro caractere de cada palavra para maiúsculo e o restante para minúsculo.
+#
+# Sintaxe
+# string.title()
+#
+# Parâmetros
+# Não possui parâmetros.
+#
+# Exemplos
+print("cubo três e escola de dados".title())  # "Cubo Três E Escola De Dados"
+print("laennder EM python".title())           # "Laennder Em Python"
+print("ola, mundo!".title())                  # "Ola, Mundo!"
+print("VERMELHO E AZUL".title())              # "Vermelho E Azul"
+
+
+# 3. Verificação
+# isalnum()
+# ↑ voltar ao topo
+# Definição
+# Retorna True se todos os caracteres da string forem alfanuméricos (letras e números).
+#
+# Sintaxe
+# string.isalnum()
+#
+# Parâmetros
+# Não possui parâmetros.
+#
+# Exemplos
+# print("CuboTrês".isalnum())    # True (sem espaços e sem caracteres especiais)
+print("EscolaDeDados2023".isalnum())  # True
+print("Olá, Mundo!".isalnum()) # False (possui pontuação)
+print("Python_3".isalnum())    # False (possui underscore)
+
+# isalpha()
+# ↑ voltar ao topo
+# Definição
+# Retorna True se todos os caracteres da string forem letras.
+#
+# Sintaxe
+# string.isalpha()
+#
+# Parâmetros
+# Não possui parâmetros.
+#
+# Exemplos
+print("Laennder".isalpha())     # True
+print("Escola3".isalpha())      # False (contém dígito)
+print("CUBOTRÊS".isalpha())     # True
+print("".isalpha())             # False (string vazia)
+
 
 # String
 nome = "Rogerio"
