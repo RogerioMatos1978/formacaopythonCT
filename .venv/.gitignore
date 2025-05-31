@@ -1,6 +1,2 @@
-# created by virtualenv automatically
-Lib/
-Scripts/
-CACHEDIR.TAG
-pyvenv.cfg
-.venv/
+# Created by venv; see https://docs.python.org/3/library/venv.html
+*
