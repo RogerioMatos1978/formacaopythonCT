@@ -6,7 +6,7 @@ from collections import defaultdict
 start_date = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
 end_date = start_date + timedelta(days=90)
 
-# Regras de recorrência
+# Regras de recorrência verificar
 eventos = {
     "Seminário de Inovação": rrule(freq=WEEKLY, byweekday=MO, dtstart=start_date, until=end_date),
     "Dia de Mentoria": rrule(freq=WEEKLY, byweekday=TU, dtstart=start_date, until=end_date),
